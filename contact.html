@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAPRU</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="contact.css">
+
+    
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
+</head>
+<body>
+    <div class="Navbar">
+        <!-- Top navigation bar -->
+        <div class="top-nav">
+            <div class="opentimelogo">
+                <img src="opentimelogo.png" alt="Logo">
+            </div>
+            <div class="open-time">
+                Opening Time: Monday to Sunday
+                9:00 AM - 5:00 PM
+            </div>
+        </div>
+        
+<!-- Bottom navigation bar -->
+<div class="bottomNav">
+    <div class="bottomNav-container">
+        <div class="logo">
+            <a href="#"><img src="Pictures/logo.png" alt="Clinic Logo"></a>
+           <div>
+                <h3>Mapru</h3>
+                <h5>Dental Clinic</h5>
+            </div> 
+        </div>
+
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li class="Services"><a href="Services">SERVICES ▾</a>
+                <ul class="dropdown">
+                    <li><a href="services.html">Cleaning</a></li>
+                    <li><a href="services.html">Fillings</a></li>
+                    <li><a href="services.html">Tooth Extraction</a></li>
+                    <li><a href="services.html">Whitening</a></li>
+                    <li><a href="services.html">Orthodontics</a></li>
+                    <li><a href="services.html">Implants</a></li>
+                    <li><a href="services.html">Surgery</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">CONTACT</a></li>
+       <li class="SignIn"><a href="#" id="openModal">SIGN IN</a></li>
+        </ul>
+    </div>
+</div>
+    </div>
+
+    <div class="banner">
+        <img src="Pictures/header.jpg" alt="Banner_Image">
+        <div class ="bottom-left"><b>A Perfect Smile Starts <br> with Great Dental Care</b></div>
+        <li class="Schedule"><button id="Appointment">Schedule an Appointment</button></li>
+    </div>
+
+    <div class="contact-team">
+        <h2>Contact our Team</h2>
+        <p>Have questions or need assistance? We're here to help</p>
+    </div>
+
+    <section class="contact-form">
+        <div class="form-contact">
+            <form>
+                <div class="row-contact">
+                    <div class="input-contact">
+                         <input type="text" id="Name" name="Name" required>
+                        <label for="Name">Name</label>
+            </div>
+            <div class="input-contact">
+                        <input type="text" id="phone" name="phone" required>
+                        <label for="phone">Phone number</label>
+                    </div>
+                </div>
+                <div class="input-contact">
+                        <input type="text" id="mail" name="mail">
+                        <label for="mail">Email Address</label>
+                </div>
+                <div class="input-contact">
+                    <input type="text" id="message" name="message">
+                    <label for="message">Message</label>
+                </div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

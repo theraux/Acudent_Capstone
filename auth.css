@@ -1,0 +1,247 @@
+/* Base Styling*/
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Center the modal container on the screen */
+.body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Modal Container*/
+.container {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 
+              0 6px 20px rgba(0, 0, 0, 0.19);
+  position: absolute;
+  overflow: hidden;
+  min-height: 480px;
+  width: 768px;
+}
+
+/* Forms inside modal */
+.container form {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1px;
+  height: 100%;
+}
+
+/* Button Styling */
+.container button {
+  background-color: #865932;
+  color: #fff;
+  font-size: 12px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+/*  Form Containers (Login / Signup)*/
+.form-container {
+  position: absolute;
+  top: 0%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  background-color: #fff;
+}
+
+/* Sign In Styling */
+.signin {
+  left: 0%;
+  width: 50%;
+  z-index: 2;
+}
+
+/* Sign Up Hidden by Default */
+.signup {
+  left: 0%;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+/* Active State for Sign Up */
+.container.active .signup {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: move 0.6s;
+}
+
+/* Animations for toggle transition */
+@keyframes move {
+  0%, 49.99% {
+    opacity: 0;
+    z-index: 5;
+  }
+}
+
+/* Toggle Container (Panel Switch)*/
+.toggle-container {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+  border-radius: 100px 0 0 100px;
+  z-index: 1000;
+}
+
+/* Shift toggle to left on active */
+.container.active .toggle-container {
+  transform: translateX(-100%);
+}
+
+/* Toggle background and layout */
+.toggle {
+  background: linear-gradient(to right, #F5E3CD, #FEF3E7);
+  color: #4E1F00;
+  position: relative;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+  display: flex;
+}
+
+/* Move toggle on active */
+.container.active .toggle {
+  transform: translateX(50%);
+}
+
+/* Toggle Panels (text + button areas) */
+.toggle-panel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 30px;
+  text-align: center;
+  top: 0;
+  transition: all 0.6s ease-in-out;
+}
+
+/* Toggle left panel starts off-screen */
+.toggle-left {
+  left: 0;
+  transform: translateX(-200%);
+}
+
+/* Toggle right panel starts visible */
+.toggle-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+/* Left panel comes in on active */
+.container.active .toggle-left {
+  transform: translateX(0);
+}
+
+/* Right panel slides out on active */
+.container.active .toggle-right {
+  transform: translateX(-200%);
+}
+
+/*  Floating Label Input Group*/
+.input-group {
+  position: relative;
+  width: 70%;
+  margin: 8px 10px;
+}
+
+/* Input style */
+.input-group input {
+  width: 100%;
+  padding: 18px 15px 10px 10px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  outline: none;
+}
+
+/* Floating label default position */
+.input-group label {
+  position: absolute;
+  left: 8px;
+  top: 10px;
+  background-color: #fff;
+  padding: 0 4px;
+  color: #999;
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+
+/* Label floats when focused or filled */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown):valid + label {
+  top: 8px;
+  left: 8px;
+  font-size: 10px;
+  color: #9D724C;
+}
+.signup .input-group {
+  margin: 4px 5px; /* Less vertical spacing */
+ 
+}
+
+.signup .input-group input {
+  padding: 15px 8px 6px 8px; /* Reduce padding */
+  font-size: 11px; /* Slightly smaller font size */
+}
+
+.signup .input-group label {
+  top: 6px;
+  left: 8px;
+  font-size: 12px;
+  padding: 0 2px;
+}
+
+/* Floating label for signup */
+.signup .input-group input:focus + label,
+.signup .input-group input:not(:placeholder-shown):valid + label {
+  top: 2px;
+  font-size: 9px;
+  color: #9D724C;
+}
+
+/*Row Layout for Side-by-side Inputs*/
+.row {
+  display: flex;
+  width: 100%;
+}
+
+/* Inputs in row get equal width */
+.row .input-group {
+  width: 50%;
+}
+
+h2{
+  padding: 10px;
+  font-size: 2rem;
+}
+h4{
+  padding-bottom: 18px; 
+  text-align: center;
+  font-size: 1rem;
+}
