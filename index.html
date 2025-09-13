@@ -342,45 +342,42 @@ function showDivs(n) {
 
 
     <!-- Sign In/Sign Up Popup Modal -->
-    <div id="popupModal">
-      <div id="container" class="container">
-        <button id="closeModal">&times;</button>
-    
-        <!-- Sign In Form -->
-        <div class="form-container signin">
-          <form>
-        <div class="text">
+  <div id="popupModal">
+    <div id="container" class="container">
+      <button id="closeModal">&times;</button>
+  
+      <!-- Sign In Form -->
+      <div class="form-container signin">
+        <form>
+          <div class="text">
             <h2>Sign In</h2>
             <h4>Welcome Back!</h4>
-        </div>
-    
-            <div class="input-group">
-              <input type="text" id="signin-username" name="username" required>
-              <label for="signin-username">Username</label>
-            </div>
-    
-            <div class="input-group">
-              <input type="password" id="signin-pass" name="pass" required>
-              <label for="signin-pass">Password</label>
-            </div>
-    
-            <div class="text">
+          </div>
+          <div class="input-group">
+            <input type="text" id="signin-username" name="username" required>
+            <label for="signin-username">Username</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="signin-pass" name="pass" required>
+            <label for="signin-pass">Password</label>
+          </div>
+          <div class="text">
             <h4>Forgot Password?</h4>
-            </div>
-            <button>Sign In</button>
-            
-        <button type="button" id="adminLoginBtn">Admin log in</button> 
- 
-          </form> 
-        </div>   
-        <!-- Sign Up Form -->
-        <div class="form-container signup">
-          <form>
-            <div class="text">
-            <h2>Sign Up</h2>
-            </div>
-    
-            <div class="row">
+          </div>
+          <button>Sign In</button>
+          <button type="button" id="adminLoginBtn">Admin log in</button>
+        </form> 
+      </div>   
+  
+
+
+
+
+      <!-- Sign Up Form -->
+      <div class="form-container signup">
+        <form>
+          <div class="text"><h2>Sign Up</h2></div>
+          <div class="row">
             <div class="input-group">
               <input type="text" id="Fname" name="Fname" required>
               <label for="Fname">First Name</label>
@@ -390,180 +387,130 @@ function showDivs(n) {
               <label for="Lname">Last Name</label>
             </div>
           </div>
-
-            <div class="input-group">
-              <input type="text" id="Contact" name="Contact" required>
-              <label for="Contact">Contact Number</label>
-            </div>
-    
-            <div class="input-group">
-              <input type="email" id="email" name="email" required>
-              <label for="email">Email</label>
-            </div>
-
-            <div class="input-group">
-              <input type="text" id="Username" name="Username" required>
-              <label for="Username">Username</label>
-            </div>
-            
-          
-            <div class="input-group">
-              <input type="password" id="signup-pass" name="pass" required>
-              <label for="signup-pass">Password</label>
-            </div>
-    
-            <div class="input-group">
-              <input type="password" id="Cpass" name="Cpass" required>
-              <label for="Cpass">Confirm Password</label>
-            </div>
-        
-
-            <button>Sign Up</button>
-          </form>
-        </div>
-        
-         <!--Sign in form for Dental Clinic Staff-->
-
-    <div class="form-container admin">
-      <form>
-        <div class="text">
-          <h2>Admin LogIn</h2>
-        </div>
-        <div class="input-group">
-              <input type="text" id="user-id" name="user-id" required>
-              <label for="user-id">User Id</label>
-            </div>
-    
-            <div class="input-group">
-              <input type="password" id="user-pass" name="user-pass" required>
-              <label for="user-pass">Password</label>
-            </div>
-             <div class="text">
-            <h4>Forgot Password?</h4>
-            </div>
-            <button>Sign In</button>
-      </form>
-    </div>
-    
-        <!-- Toggle Panel -->
-        <div class="toggle-container">
-          <div class="toggle">
-            <div class="toggle-panel toggle-right">
-                <div class="text">
+          <div class="input-group">
+            <input type="text" id="Contact" name="Contact" required>
+            <label for="Contact">Contact Number</label>
+          </div>
+          <div class="input-group">
+            <input type="email" id="email" name="email" required>
+            <label for="email">Email</label>
+          </div>
+          <div class="input-group">
+            <input type="text" id="Username" name="Username" required>
+            <label for="Username">Username</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="signup-pass" name="pass" required>
+            <label for="signup-pass">Password</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="Cpass" name="Cpass" required>
+            <label for="Cpass">Confirm Password</label>
+          </div>
+          <button>Sign Up</button>
+        </form>
+      </div>
+      
+      <!-- Toggle Panel -->
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-right">
+            <div class="text">
               <h2>SIGN UP NOW</h2>
               <h4>because your journey to better dental care starts here.</h4>
-                </div>
-              <button class="hidden" id="Sign Up">Sign Up</button>
             </div>
-            <div class="toggle-panel toggle-left">
-                <div class="text">
+            <button class="hidden" id="Sign Up">Sign Up</button>
+          </div>
+          <div class="toggle-panel toggle-left">
+            <div class="text">
               <h2>WELCOME BACK!</h2>
               <br>
               <h4>Your smile journey continues—sign in to pick up where you left off.</h4>
             </div>
-
-              <button class="hidden" id="Sign In">Sign In</button>
-            </div>
+            <button class="hidden" id="Sign In">Sign In</button>
           </div>
         </div>
       </div>
     </div>
-  
+
+    <!-- 🚀 Admin Overlay -->
+   <div id="adminContainer" class="admin-container">
+  <form>
+    <h2>Admin Log In</h2>
+    <div class="input-group">
+      <input type="text" id="admin-user" required>
+      <label for="admin-user">User ID</label>
+    </div>
+    <div class="input-group">
+      <input type="password" id="admin-pass" required>
+      <label for="admin-pass">Password</label>
+    </div>
+    <h4>Forgot Password?</h4>
+    <button type="submit" id="adminlogin">Log In</button>
+   <p class="back-arrow" onclick="goBack()">
+  <span class="arrow">&larr;</span>Back
+</p>
+  </form>
+</div>
+
 
   <script>
-  // Existing code...
-  const container = document.getElementById('container');
-  const registerBtn = document.getElementById('Sign Up');
-  const loginBtn = document.getElementById('Sign In');
-  const adminBtn = document.getElementById('adminLoginBtn'); // Admin Login Button
+    const container = document.getElementById('container');
+    const registerBtn = document.getElementById('Sign Up');
+    const loginBtn = document.getElementById('Sign In');
+const adminBtn = document.getElementById('adminLoginBtn'); // button in toggle panel
+const adminContainer = document.getElementById('adminContainer');
 
 
-  const modal = document.getElementById('popupModal');
-  const openModalBtn = document.getElementById('openModal');
-  const closeModalBtn = document.getElementById('closeModal');
+    const modal = document.getElementById('popupModal');
+    const openModalBtn = document.getElementById('openModal');
+    const closeModalBtn = document.getElementById('closeModal');
 
-  registerBtn.addEventListener('click', () => {
-    container.classList.add('active');
-    container.classList.remove('admin-active'); // Hide admin if open
-  });
+    registerBtn.addEventListener('click', () => {
+      container.classList.add('active');
+      adminContainer.classList.remove('active');
+    });
 
-  loginBtn.addEventListener('click', () => {
-    container.classList.remove('active');
-    container.classList.remove('admin-active'); // Hide admin if open
-  });
+    loginBtn.addEventListener('click', () => {
+      container.classList.remove('active');
+      adminContainer.classList.remove('active');
+    });
 
-  // ✅ Admin toggle
-  adminBtn.addEventListener('click', () => {
-    container.classList.remove('active');
-    container.classList.add('admin-active'); // Show admin form
-  });
+    // Admin toggle
+// Show admin form when admin login button clicked
+adminBtn.addEventListener('click', () => {
+  adminContainer.classList.add('active');
+});
 
-  // Open modal
-  openModalBtn.addEventListener('click', () => {
-    modal.style.display = 'flex';
-  });
 
-  // Close modal
-  closeModalBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-    container.classList.remove('active', 'admin-active');
-  });
+    // Open modal
+    if(openModalBtn){
+      openModalBtn.addEventListener('click', () => {
+        modal.style.display = 'flex';
+      });
+    }
 
-  // Close when clicking outside
-  window.addEventListener('click', (event) => {
-    if (event.target === modal) {
+    // Close modal
+    closeModalBtn.addEventListener('click', () => {
       modal.style.display = 'none';
-      container.classList.remove('active', 'admin-active');
-    }
-  });
-</script>
+      container.classList.remove('active');
+      adminContainer.classList.remove('active');
+    });
 
+    // Close when clicking outside
+    window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+        container.classList.remove('active');
+        adminContainer.classList.remove('active');
+      }
+    });
 
+    function goBack() {
+   adminContainer.classList.remove('active');
+}
+  </script>
 
- <script>
-  // Sample data – replace this with API call later
-  const reviews = [
-    {
-      text: "This clinic changed my life! The staff is so friendly.",
-      image: "https://via.placeholder.com/100",
-      name: "Jane Doe"
-    },
-    {
-      text: "I never thought going to the dentist could be enjoyable!",
-      image: "https://via.placeholder.com/100",
-      name: "John Smith"
-    },
-    {
-      text: "Professional, clean, and they really care about their patients.",
-      image: "https://via.placeholder.com/100",
-      name: "Emily Johnson"
-    }
-  ];
-
-  const Reviewscontainer = document.getElementById('reviews-container');
-  let currentIndex = 0;
-
-  // Create review elements
-  reviews.forEach((review, index) => {
-    const div = document.createElement('div');
-    div.className = 'review';
-    div.style.display = index === 0 ? 'block' : 'none'; // show first only
-    div.innerHTML = `
-      <img src="${review.image}" alt="${review.name}">
-      <p>${review.text}</p>
-      <h4>- ${review.name}</h4>
-    `;
-    Reviewscontainer.appendChild(div);
-  });
-
-  // Slideshow logic
-  setInterval(() => {
-    const allReviews = document.querySelectorAll('.review');
-    allReviews[currentIndex].style.display = 'none';
-    currentIndex = (currentIndex + 1) % allReviews.length;
-    allReviews[currentIndex].style.display = 'block';
-  }, 4000); // change every 4 seconds
-</script>
-
+  
 </body>
 </html>
