@@ -202,21 +202,17 @@
 }
 .signup .input-group {
   margin: 4px 5px; /* Less vertical spacing */
- 
 }
-
 .signup .input-group input {
   padding: 15px 8px 6px 8px; /* Reduce padding */
   font-size: 11px; /* Slightly smaller font size */
 }
-
 .signup .input-group label {
   top: 6px;
   left: 8px;
   font-size: 12px;
   padding: 0 2px;
 }
-
 /* Floating label for signup */
 .signup .input-group input:focus + label,
 .signup .input-group input:not(:placeholder-shown):valid + label {
@@ -224,7 +220,6 @@
   font-size: 9px;
   color: #9D724C;
 }
-
 /*Row Layout for Side-by-side Inputs*/
 .row {
   display: flex;
@@ -244,4 +239,71 @@ h4{
   padding-bottom: 18px; 
   text-align: center;
   font-size: 1rem;
+}
+
+/*admin side */
+
+.admin {
+  display: none; /* Hidden initially */
+  position: absolute;
+  left: 0%;
+  width: 50%;
+  top: 0;
+  height: 100%;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out;
+  z-index: 9999;
+}
+
+.admin form {
+  z-index: 10000;
+  position: relative;
+}
+#adminLoginBtn {
+  display: block;
+  margin: 10px auto;
+  margin-top: 410px;
+  margin-right: 512px;
+  background-color: #865932;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1010;
+  position: relative;
+  
+}
+
+.container.admin-active .admin {
+  display: block;
+  opacity: 1;
+  transform: translateX(100%);
+  z-index: 5;
+}
+
+.container.admin-active .signin,
+.container.admin-active .signup {
+  display: none; /* completely remove them */
+}
+
+.container.admin-active .admin {
+  display: flex; /* instead of block → centers form properly */
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transform: none; /* reset the slide effect */
+  z-index: 10;
+}
+#adminLoginBtn {
+  margin-top: 10px;
+  background-color: #9D724C;
+  margin-left: 510px;
+  padding: 10px 30px;
+ 
+}
+
+
+.container.admin-active #adminLoginBtn {
+  display: none;
 }

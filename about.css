@@ -7,7 +7,6 @@ body {
     background-color: #ffffff;
     font-family: "Montserrat", sans-serif;
 }
-
 .Navbar .top-nav{
     margin-left: auto;
     background-color: #F5E3CD;
@@ -19,7 +18,6 @@ body {
 
     color: #000;
 }
-
 .Navbar .top-nav .opentimelogo img {
     width: 25px; 
     height: auto;
@@ -29,13 +27,10 @@ body {
     font-size: 16px;
     font-weight:500px;
 }
-
-
 .bottomNav {
     background-color: #FEF3E7;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-
 .bottomNav-container {
     max-width: 1100px;
     margin: 0 auto; /* centers the content */
@@ -44,35 +39,29 @@ body {
     align-items: center;
     padding: 10px 20px;
 }
-
 .logo {
     display: flex;
     align-items: center;
 }
-
 .logo img {
     width: 80px;
     height: auto;
     margin-right: 10px;
 }
-
 .logo h3 {
     font-size: 25px;
     color: #866442;
     margin-bottom: 2px;
 }
-
 .logo h5 {
     font-size: 14px;
     color: #866442;
 }
-
 .bottomNav-container ul {
     list-style: none;
     display: flex;
     gap: 20px;
 }
-
 .bottomNav-container ul li a {
     text-decoration: none;
     color: #000;
@@ -80,7 +69,6 @@ body {
     padding: 8px 10px;
     transition: background 0.3s, color 0.3s;
 }
-
 .bottomNav-container ul li a:hover {
     background-color: #F5E3CD;
     color: #000;
@@ -89,7 +77,6 @@ body {
 .Services {
     position: relative;
 }
-
 /* Hide dropdown by default */
 .Services > .dropdown {
     display: none;
@@ -101,18 +88,17 @@ body {
     flex-direction: column;
     min-width: 160px;
 }
-
 /* Show dropdown on hover */
 .Services:hover > .dropdown {
     display: block;
 }
-
 .dropdown li a {
     padding: 10px 15px;
     display: block;
     white-space: nowrap;
     overflow: hidden;
 }
+/*start of first banner*/
 .banner {
     position: relative;
     width: 100%;
@@ -121,7 +107,6 @@ body {
     display: flex;
     
 }
-
 .banner img {
     width: 100%;
     height: auto;
@@ -132,12 +117,9 @@ body {
     top: 40%;
     left: 220px; /* Adjust this to move closer/further from left edge */
     transform: translateY(-50%); /* Centers the text vertically */
-    
     color: #9E5B08;
     font-size: 28px;
     font-weight: bold;
-
-    
     padding: 10px 20px;
     border-radius: 5px;
 }
@@ -146,26 +128,22 @@ body {
     top: 50%;
     left: 270px;
     transform: translateY(-50%);
-
     font-size: 18px;
     font-family: "Montserrat", sans-serif;
-
     border: 1px solid #866442;
     border-radius: 10px;
     background-color: #9D724C;
-
     color: white;
     padding: 15px 20px;
     cursor: pointer;
     font-weight: bold;
     text-align: center;
 }
-
 #Appointment:hover {
     background-color: #F5E3CD;
     color: white;
 }
-
+/* end of start banner */
 
 /*start second baner*/
 .about-section {
@@ -177,17 +155,14 @@ body {
     margin: 50px auto; /* centers section */
     margin-top: 120px;
     padding: 20px;
-    
-    
-}
 
+}
 .about-image img {
     margin-left: 100px;
     max-width: 700px;  /* adjust size as needed */
     height: auto;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
 .about-text {
     margin-left: 40px;
     margin-right: 100px;
@@ -195,26 +170,19 @@ body {
     font-family: "Montserrat", sans-serif;
     color: #502C00;
 }
-
 .about-text h2 {
     margin-bottom: 15px;
     font-size: 24px;
     color: #502C00;
     text-align: center;
 }
-
 .about-text p {
     margin-bottom: 12px;
     line-height: 1.9;
     text-align: justify;
-    
 }
-
-
 /*Hanggang dito*/
-
 /*start*/
-
 #popupModal {
     display: none; /* hidden by default */
     position: fixed;
@@ -247,15 +215,12 @@ body {
     cursor: pointer;
     z-index: 1002;
 }
-
 #closeModal:hover {
     color: #F5E3CD;
 }
-
 #openModal{
     position: relative;
     z-index: 1001;
-    
     background-color: #BC8E67; 
     padding: 8px 15px; /* Space inside the container */
     border: 1px solid #866442; 
@@ -264,13 +229,9 @@ body {
     max-width: 800px; 
     width: 100%;
 }
-
 #openModal:hover{
     background-color:  #F5E3CD;
 }
-
-
-
 /* Why Choose Us Section */
 .why-choose {
     padding: 60px 10%;
@@ -281,21 +242,17 @@ body {
     border-bottom: 2px solid #F5E3CD;
 
 }
-
 .why-choose img{
     max-width: 150px;
     height: auto;
     margin-left: 80px;
 }
-
 .why-choose h2 {
     font-size: 28px;
     margin-bottom: 40px;
     color: #502C00;
     font-weight: bold;
-    
 }
-
 /* Grid layout */
 .grid-container {
     display: grid;
@@ -303,7 +260,6 @@ body {
     gap: 25px;
     margin-bottom: 40px;
 }
-
 .grid-item {
     background: #ffffff;
     padding: 25px;
@@ -312,14 +268,12 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
 }
-
 .grid-item:hover {
     background-color: #FEF3E7;
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0,0,0,0.12);
     transition: background 0.5s;
 }
-
 .grid-item h3 {
     font-size: 18px;
     margin-bottom: 10px;
@@ -327,14 +281,12 @@ body {
     font-weight: bold;
     text-align: center;
 }
-
 .grid-item p {
     font-size: 15px;
     color: #502C00;
     line-height: 1.6;
     text-align: center;
 }
-
 /* Retained paragraph styling */
 .why-choose-text {
     max-width: 1350px;
@@ -375,7 +327,6 @@ body {
   border: 1px solid #9E5B08;
   
 }
-
 .doctor-card img:hover{
     background-color: #FEF3E7;
     transform: translateY(-5px);
@@ -387,30 +338,25 @@ body {
   color: #502C00;
   font-weight: bold;
 }
-
 /* Footer */
 .footer {
   background-color: #4D4A47;
   color: white;
   padding: 60px 20px;
 }
-
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: nowrap; /* no wrapping */
   gap: 30px;
 }
-
-.footer-section.left {
+.footer-section.left, .footer-section.right {
   flex: 0 0 auto;
   max-width: 300px;
   text-align: left;
 }
-
 .footer-section.center {
   flex: 1 1 auto;
   text-align: center;
@@ -419,30 +365,20 @@ body {
   align-items: center;
   justify-content: center;
 }
-
-.footer-section.right {
-  flex: 0 0 auto;
-  max-width: 300px;
-  text-align: left;
-}
-
 .footer-section.left h3,
 .footer-section.right h3 {
   font-weight: 600;
   margin-top: 15px;
   font-family: "Montserrat", sans-serif;
 }
-
 .footer-section ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .footer-section ul li {
   margin-top: 10px;
 }
-
 .footer-section ul li a {
   color: #ccc;
   text-decoration: none;
@@ -452,32 +388,26 @@ body {
   padding: 5px 0; /* reduced padding */
   display: inline-block; /* so padding works */
 }
-
 .footer-section ul li a:hover {
   color: #d7a13a; /* gold-ish hover */
 }
-
 .footer-logo {
   width: 100px;
   margin-bottom: 15px;
 }
-
 .social-icons a {
   display: inline-block;
   margin: 0 8px;
 }
-
 .social-icons img {
   width: 50px;
   height: 50px;
   filter: brightness(0) invert(1); /* white icons */
   transition: filter 0.3s ease;
 }
-
 .social-icons a:hover img {
   filter: brightness(0) invert(0.6) sepia(1) saturate(5) hue-rotate(20deg); /* gold-ish tint */
 }
-
 footer p {
   font-size: 12px;
   margin-top: 15px;
@@ -491,7 +421,6 @@ footer p {
     align-items: center;
     text-align: center;
   }
-
   .footer-section {
     flex: 1 1 100%;
     margin-bottom: 25px;

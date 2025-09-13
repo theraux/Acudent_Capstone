@@ -39,7 +39,7 @@
         <ul>
             <li><a href="index.html">HOME</a></li>
             <li><a href="about.html">ABOUT</a></li>
-            <li class="Services"><a href="Services">SERVICES ▾</a>
+            <li class="Services"><a href="services.html">SERVICES ▾</a>
                 <ul class="dropdown">
                     <li><a href="services.html">Cleaning</a></li>
                     <li><a href="services.html">Fillings</a></li>
@@ -163,12 +163,12 @@
   <h2>Our Services</h2>
   <div class="service-grid">
     <div class="service-card">
-      <img src="Pictures/general dentistry.png" alt="General Dentistry">
+      <img src="Pictures/general dentistry.png" alt="Periodontics">
       <div class="overlay">
         <h3>Periodontics</h3>
         <ul>
-          <li><a href="services.html#phrophylaxis">Oral Phrophylaxis</a></li>
-          <li><a href="services.html#scaling">Deep Scaling</a></li>
+          <li><a href="services.html#periodontics">Oral Phrophylaxis</a></li>
+          <li><a href="services.html#periodontics">Deep Scaling</a></li>
         </ul>
       </div>
     </div>
@@ -178,9 +178,9 @@
       <div class="overlay-right">
         <h3>Cosmetic Care</h3>
         <ul>
-          <li><a href="services.html#fillings">Tooth Filling</a></li>
-          <li><a href="services.html#whitening">Teeth Whitening</a></li>
-          <li><a href="services.html#bonding">Cosmetic Bonding</a></li>
+          <li><a href="services.html#cosmetic-care">Tooth Filling</a></li>
+          <li><a href="services.html#cosmetic-care">Teeth Whitening</a></li>
+          <li><a href="services.html#cosmetic-care">Cosmetic Bonding</a></li>
         </ul>
       </div>
     </div>
@@ -190,9 +190,9 @@
       <div class="overlay">
         <h3>Orthodontics</h3>
         <ul>
-          <li><a href="services.html#metal">Metal Braces</a></li>
-          <li><a href="services.html#ceramic">Ceramic Braces</a></li>
-          <li><a href="services.html#ligating">Self Ligating Braces</a></li>
+          <li><a href="services.html#orthodontics">Metal Braces</a></li>
+          <li><a href="services.html#orthodontics">Ceramic Braces</a></li>
+          <li><a href="services.html#orthodontics">Self Ligating Braces</a></li>
         </ul>
       </div>
     </div>
@@ -202,9 +202,9 @@
       <div class="overlay-right">
         <h3>Prosthodontics</h3>
         <ul>
-          <li><a href="services.html#fixed">Fixed Denture</a></li>
-          <li><a href="services.html#partial">Partial Denture</a></li>
-          <li><a href="services.html#complete">Complete Dentures</a></li>
+          <li><a href="services.html#prosthodontics">Fixed Denture</a></li>
+          <li><a href="services.html#prosthodontics">Partial Denture</a></li>
+          <li><a href="services.html#prosthodontics">Complete Dentures</a></li>
         </ul>
       </div>
     </div>
@@ -214,8 +214,8 @@
       <div class="overlay">
         <h3>Surgical Treatment</h3>
         <ul>
-          <li><a href="services.html#implant">Tooth Extraction</a></li>
-          <li><a href="services.html#surgery">Odontectomy</a></li>
+          <li><a href="services.html#surgical-treatment">Tooth Extraction</a></li>
+          <li><a href="services.html#surgical-treatment">Odontectomy</a></li>
         </ul>
       </div>
     </div>
@@ -309,8 +309,8 @@ function showDivs(n) {
     <div class="footer-section left">
       <h3>About Mapru</h3>
       <ul>
-        <li><a href="#">Who we are</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="about.html">Who we are</a></li>
+        <li><a href="#contact.html">Contact Us</a></li>
         <li><a href="#">Customer Reviews</a></li>
       </ul>
     </div>
@@ -330,11 +330,12 @@ function showDivs(n) {
       
       <h3>Services</h3>
       <ul>
-        <li><a href="#">General Dentistry</a></li>
-        <li><a href="#">Cosmetic Care</a></li>
-        <li><a href="#">Surgical Treatment</a></li>
+        <li><a href="services.html#periodontics">Periodontics</a></li>
+        <li><a href="services.html#cosmetic-care">Cosmetic Care</a></li>
+        <li><a href="services.html#orthodontics">Orthodontics</a></li>
+         <li><a href="services.html#prosthodontics">Prosthodontics</a></li>
+        <li><a href="services.html#surgical-treatment">Surgical Treatment</a></li>
       </ul>
-      
     </div>
   </div>
 </footer>
@@ -367,9 +368,11 @@ function showDivs(n) {
             <h4>Forgot Password?</h4>
             </div>
             <button>Sign In</button>
-          </form>
-        </div>
-    
+            
+        <button type="button" id="adminLoginBtn">Admin log in</button> 
+ 
+          </form> 
+        </div>   
         <!-- Sign Up Form -->
         <div class="form-container signup">
           <form>
@@ -419,6 +422,28 @@ function showDivs(n) {
           </form>
         </div>
         
+         <!--Sign in form for Dental Clinic Staff-->
+
+    <div class="form-container admin">
+      <form>
+        <div class="text">
+          <h2>Admin LogIn</h2>
+        </div>
+        <div class="input-group">
+              <input type="text" id="user-id" name="user-id" required>
+              <label for="user-id">User Id</label>
+            </div>
+    
+            <div class="input-group">
+              <input type="password" id="user-pass" name="user-pass" required>
+              <label for="user-pass">Password</label>
+            </div>
+             <div class="text">
+            <h4>Forgot Password?</h4>
+            </div>
+            <button>Sign In</button>
+      </form>
+    </div>
     
         <!-- Toggle Panel -->
         <div class="toggle-container">
@@ -444,38 +469,53 @@ function showDivs(n) {
       </div>
     </div>
   
-    <!--Script for reviews section -->
+
   <script>
-    const container = document.getElementById('container');
-    const registerBtn = document.getElementById('Sign Up');
-    const loginBtn = document.getElementById('Sign In');
-    const modal = document.getElementById('popupModal');
-    const openModalBtn = document.getElementById('openModal');
-    const closeModalBtn = document.getElementById('closeModal');
+  // Existing code...
+  const container = document.getElementById('container');
+  const registerBtn = document.getElementById('Sign Up');
+  const loginBtn = document.getElementById('Sign In');
+  const adminBtn = document.getElementById('adminLoginBtn'); // Admin Login Button
 
-    registerBtn.addEventListener('click', () => {
-        container.classList.add('active');
-    });
 
-    loginBtn.addEventListener('click', () => {        container.classList.remove('active');
-    });
+  const modal = document.getElementById('popupModal');
+  const openModalBtn = document.getElementById('openModal');
+  const closeModalBtn = document.getElementById('closeModal');
 
-    // Open modal
-    openModalBtn.addEventListener('click', () => {
-        modal.style.display = 'flex';
-    });
+  registerBtn.addEventListener('click', () => {
+    container.classList.add('active');
+    container.classList.remove('admin-active'); // Hide admin if open
+  });
 
-    // Close modal
-    closeModalBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
+  loginBtn.addEventListener('click', () => {
+    container.classList.remove('active');
+    container.classList.remove('admin-active'); // Hide admin if open
+  });
 
-    // Optional: Close when clicking outside the modal
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            modal.style.display = 'none';
+  // ✅ Admin toggle
+  adminBtn.addEventListener('click', () => {
+    container.classList.remove('active');
+    container.classList.add('admin-active'); // Show admin form
+  });
+
+  // Open modal
+  openModalBtn.addEventListener('click', () => {
+    modal.style.display = 'flex';
+  });
+
+  // Close modal
+  closeModalBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+    container.classList.remove('active', 'admin-active');
+  });
+
+  // Close when clicking outside
+  window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+      container.classList.remove('active', 'admin-active');
     }
-    });
+  });
 </script>
 
 
