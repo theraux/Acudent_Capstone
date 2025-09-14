@@ -240,50 +240,64 @@
       text-align: center;
       font-size: 1rem;
     }
+
+/* Remove opacity fade from container */
 .admin-container {
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   width: 100%;
   height: 100%;
-  display: flex;                 /* always keep flex active */
-  justify-content: center;
-  align-items: center;
-
-  
-  z-index: 2000;
-
-  /* hide it smoothly */
-  opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  z-index: 2000;
+  background: transparent; /* optional backdrop */
 }
 
 .admin-container.active {
-  opacity: 1;
   pointer-events: all;
 }
 
-.admin-container form {
+/* Box animation */
+.admin-grow {
   background: #fff;
-  width: 768px;       /* same as signin/signup */
-  height: 480px;
-  padding: 120px;
+  width: 768px;
+  height: 0;
+  overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  text-align: center;
-  z-index: 2100;
+  transition: height 0.5s ease;
+  position: relative;
+}
 
-  /* initial hidden state */
+.admin-container.active .admin-grow {
+  height: 480px;
+}
+
+.admin-container.closing .admin-grow {
+  height: 0;
+}
+
+.admin-grow form {
   opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: opacity 0.3s ease 0.2s;
+  padding: 40px;
+  height: 100%;
 }
 
-.admin-container.active form {
+.admin-container.active .admin-grow form {
   opacity: 1;
-  transform: translateY(0);
 }
+
+.admin-container.closing .admin-grow form {
+  opacity: 0;
+}
+
+
+
 .admin-container .input-group{
   margin-left: 68px;
   margin-top: 15px;
@@ -300,19 +314,29 @@
 }
 
 .back-arrow {
+  position: absolute;  /* place it absolutely */
+  top: 15px;
+  left: 20px;
   cursor: pointer;
   font-size: 1rem;
   user-select: none;
   color: #502C00;
-  transform: translate(-60%, -1200%);
+  display: flex;
+  align-items: center;
 }
 
 .back-arrow .arrow {
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   margin-right: 8px;
   vertical-align: middle;
 }
-.admin-container h2{
+
+
+
+
+
+
+in-container h2{
   font-size: 1.5vw;
 }
 

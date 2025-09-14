@@ -9,6 +9,7 @@ body {
 }
 
 .Navbar .top-nav{
+    
     margin-left: auto;
     background-color: #F5E3CD;
     height: 40px;
@@ -34,6 +35,7 @@ body {
 .bottomNav {
     background-color: #FEF3E7;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+   
 }
 
 .bottomNav-container {
@@ -43,6 +45,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+
 }
 
 .logo {
@@ -124,15 +127,13 @@ body {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     color: #4E1F00;
-  
-    display: flex;
     justify-content: center;
     align-items: center;
-  
     z-index: 9999;
   }
+
   #popupModal .container {
-    position: relative;
+    position: flex;
     z-index: 1001;
   }
   #closeModal {
@@ -171,55 +172,71 @@ body {
 
 
 /*start of first banner */
-.banner {
-    position: relative;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    display: flex;
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
-.banner img {
-    width: 100%;
-    height: auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* optional: subtle shadow */
+
+.slide {
+  display: none;
+  position: relative;
 }
-.bottom-left{
-    position: absolute;
-    top: 40%;
-    left: 12%; /* Adjust this to move closer/further from left edge */
-    transform: translateY(-50%); /* Centers the text vertically */
-    
-    color: #9E5B08;
-    font-size: 1.8vw;
-    font-weight: bold;
 
-    
-    padding: 10px 20px;
-    border-radius: 5px;
+.slide img {
+  width: 100%;
+  height: auto;
 }
-#Appointment{
-    position: absolute;
-    top: 50%;
-    left: 14%;
-    transform: translateY(-50%);
 
-    font-size: 1vw;
-    border: 1px solid #866442;
-    border-radius: 10px;
-    background-color: #9D724C;
+.fade {
+  animation: fadeEffect 1.5s;
+}
 
-    color: white;
-    padding: 15px 20px;
-    cursor: pointer;
-    font-weight: bold;
-    text-align: center;
+@keyframes fadeEffect {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+.bottom-left-container {
+  background-color: rgba(255, 255, 255, 0.70); /* Semi-transparent white background */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  height: 200px;
+  margin: 0 auto; /* Center the container */
+  position: absolute; /* Position it on the image */
+  top: 40%;
+  left: 12%;
+}
+
+.bottom-left {
+  color: #9E5B08; /* Text color */
+  font-size: 28px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+#Appointment {
+  font-size: 1vw;
+  border: 1px solid #866442;
+  border-radius: 10px;
+  background-color: #9D724C;
+  color: white;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px; /* Add some space between the text and button */
+  display: block;
+  width: 100%; /* Make the button full width inside the container */
 }
 
 #Appointment:hover {
-    background-color: #F5E3CD;
-    color: white;
+  background-color: #F5E3CD;
+  color: white;
 }
-
 
 
 /*end of first banner*/

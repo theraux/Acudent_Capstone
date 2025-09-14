@@ -98,6 +98,7 @@ body {
     white-space: nowrap;
     overflow: hidden;
 }
+
 /*start of first banner*/
 .banner {
     position: relative;
@@ -182,7 +183,7 @@ body {
     text-align: justify;
 }
 /*Hanggang dito*/
-/*start*/
+
 #popupModal {
     display: none; /* hidden by default */
     position: fixed;
@@ -232,6 +233,7 @@ body {
 #openModal:hover{
     background-color:  #F5E3CD;
 }
+
 /* Why Choose Us Section */
 .why-choose {
     padding: 60px 10%;

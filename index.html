@@ -57,11 +57,59 @@
 </div>
     </div>
 
-    <div class="banner">
-        <img src="Pictures/header.jpg" alt="Banner_Image">
-        <div class ="bottom-left"><b>A Perfect Smile Starts <br> with Great Dental Care</b></div>
-        <li class="Schedule"><button id="Appointment">Schedule an Appointment</button></li>
+
+
+  <!--First banner-->
+    <div class="slideshow-container">
+  <div class="slide fade">
+    <img src="Pictures/header.jpg" alt="Banner 1">
+    <div class="bottom-left-container">
+    <div class="bottom-left">A Perfect Smile Starts <br> with Great Dental Care</div>
+    <button id="Appointment">Schedule an Appointment</button>
+  </div>
+  </div>
+
+  <div class="slide fade">
+    <img src="Pictures/mapru_aboutcopy.jpg" alt="Banner 2">
+    <div class="bottom-left-container">
+    <div class="bottom-left">Bright Smiles <br> for Every Patient</div>
+    <button id="Appointment">Schedule an Appointment</button>
+  </div>
+  </div>
+
+  <div class="slide fade">
+    <img src="Pictures/mapru_servicescopy.jpg" alt="Banner 3">
+    <div class="bottom-left-container">
+    <div class="bottom-left">Your Health, Your Confidence</div>
+    <button id="Appointment">Schedule an Appointment</button>
     </div>
+  </div>
+
+
+  <div class="slide fade">
+    <img src="Pictures/mapru_contact.png" alt="Banner 4">
+    <div class="bottom-left-container">
+    <div class="bottom-left">Your Health, Your Confidence</div>
+    <button id="Appointment">Schedule an Appointment</button>
+  </div>
+  </div>
+</div>
+
+<script>
+  let slideIndexbanner = 0;
+showSlides();
+
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndexbanner++;
+  if (slideIndexbanner > slides.length) {slideIndexbanner = 1}    
+  slides[slideIndexbanner-1].style.display = "block";  
+  setTimeout(showSlides, 4000); // Change image every 4 seconds
+}
+</script>
 
     <!-- About Section Second Banner -->
 <div class="about-section">
@@ -341,117 +389,119 @@ function showDivs(n) {
 </footer>
 
 
-    <!-- Sign In/Sign Up Popup Modal -->
-  <div id="popupModal">
-    <div id="container" class="container">
-      <button id="closeModal">&times;</button>
+
+<!-- Sign In/Sign Up Popup Modal -->
+<div id="popupModal">
+  <div id="container" class="container">
+    <button id="closeModal">&times;</button>
   
-      <!-- Sign In Form -->
-      <div class="form-container signin">
-        <form>
+    <!-- Sign In Form -->
+    <div class="form-container signin">
+      <form>
+        <div class="text">
+          <h2>Sign In</h2>
+          <h4>Welcome Back!</h4>
+        </div>
+        <div class="input-group">
+          <input type="text" id="signin-username" name="username" required>
+          <label for="signin-username">Username</label>
+        </div>
+        <div class="input-group">
+          <input type="password" id="signin-pass" name="pass" required>
+          <label for="signin-pass">Password</label>
+        </div>
+        <div class="text">
+          <h4>Forgot Password?</h4>
+        </div>
+        <button>Sign In</button>
+        <button type="button" id="adminLoginBtn">Admin log in</button>
+      </form> 
+    </div>   
+
+    <!-- Sign Up Form -->
+    <div class="form-container signup">
+      <form>
+        <div class="text"><h2>Sign Up</h2></div>
+        <div class="row">
+          <div class="input-group">
+            <input type="text" id="Fname" name="Fname" required>
+            <label for="Fname">First Name</label>
+          </div>
+          <div class="input-group">
+            <input type="text" id="Lname" name="Lname" required>
+            <label for="Lname">Last Name</label>
+          </div>
+        </div>
+        <div class="input-group">
+          <input type="text" id="Contact" name="Contact" required>
+          <label for="Contact">Contact Number</label>
+        </div>
+        <div class="input-group">
+          <input type="email" id="email" name="email" required>
+          <label for="email">Email</label>
+        </div>
+        <div class="input-group">
+          <input type="text" id="Username" name="Username" required>
+          <label for="Username">Username</label>
+        </div>
+        <div class="input-group">
+          <input type="password" id="signup-pass" name="pass" required>
+          <label for="signup-pass">Password</label>
+        </div>
+        <div class="input-group">
+          <input type="password" id="Cpass" name="Cpass" required>
+          <label for="Cpass">Confirm Password</label>
+        </div>
+        <button>Sign Up</button>
+      </form>
+    </div>
+    
+    <!-- Toggle Panel -->
+    <div class="toggle-container">
+      <div class="toggle">
+        <div class="toggle-panel toggle-right">
           <div class="text">
-            <h2>Sign In</h2>
-            <h4>Welcome Back!</h4>
+            <h2>SIGN UP NOW</h2>
+            <h4>because your journey to better dental care starts here.</h4>
           </div>
-          <div class="input-group">
-            <input type="text" id="signin-username" name="username" required>
-            <label for="signin-username">Username</label>
-          </div>
-          <div class="input-group">
-            <input type="password" id="signin-pass" name="pass" required>
-            <label for="signin-pass">Password</label>
-          </div>
+          <button class="hidden" id="Sign Up">Sign Up</button>
+        </div>
+        <div class="toggle-panel toggle-left">
           <div class="text">
-            <h4>Forgot Password?</h4>
+            <h2>WELCOME BACK!</h2>
+            <br>
+            <h4>Your smile journey continues—sign in to pick up where you left off.</h4>
           </div>
-          <button>Sign In</button>
-          <button type="button" id="adminLoginBtn">Admin log in</button>
-        </form> 
-      </div>   
-  
-
-
-
-
-      <!-- Sign Up Form -->
-      <div class="form-container signup">
-        <form>
-          <div class="text"><h2>Sign Up</h2></div>
-          <div class="row">
-            <div class="input-group">
-              <input type="text" id="Fname" name="Fname" required>
-              <label for="Fname">First Name</label>
-            </div>
-            <div class="input-group">
-              <input type="text" id="Lname" name="Lname" required>
-              <label for="Lname">Last Name</label>
-            </div>
-          </div>
-          <div class="input-group">
-            <input type="text" id="Contact" name="Contact" required>
-            <label for="Contact">Contact Number</label>
-          </div>
-          <div class="input-group">
-            <input type="email" id="email" name="email" required>
-            <label for="email">Email</label>
-          </div>
-          <div class="input-group">
-            <input type="text" id="Username" name="Username" required>
-            <label for="Username">Username</label>
-          </div>
-          <div class="input-group">
-            <input type="password" id="signup-pass" name="pass" required>
-            <label for="signup-pass">Password</label>
-          </div>
-          <div class="input-group">
-            <input type="password" id="Cpass" name="Cpass" required>
-            <label for="Cpass">Confirm Password</label>
-          </div>
-          <button>Sign Up</button>
-        </form>
-      </div>
-      
-      <!-- Toggle Panel -->
-      <div class="toggle-container">
-        <div class="toggle">
-          <div class="toggle-panel toggle-right">
-            <div class="text">
-              <h2>SIGN UP NOW</h2>
-              <h4>because your journey to better dental care starts here.</h4>
-            </div>
-            <button class="hidden" id="Sign Up">Sign Up</button>
-          </div>
-          <div class="toggle-panel toggle-left">
-            <div class="text">
-              <h2>WELCOME BACK!</h2>
-              <br>
-              <h4>Your smile journey continues—sign in to pick up where you left off.</h4>
-            </div>
-            <button class="hidden" id="Sign In">Sign In</button>
-          </div>
+          <button class="hidden" id="Sign In">Sign In</button>
         </div>
       </div>
     </div>
 
-    <!-- 🚀 Admin Overlay -->
-   <div id="adminContainer" class="admin-container">
-  <form>
-    <h2>Admin Log In</h2>
-    <div class="input-group">
-      <input type="text" id="admin-user" required>
-      <label for="admin-user">User ID</label>
+    <!-- 🚀 Admin Overlay (MOVED INSIDE container) -->
+    <div id="adminContainer" class="admin-container">
+      <div class="admin-grow">
+        <form>
+          <h2>Admin Log In</h2>
+          <div class="input-group">
+            <input type="text" id="admin-user" required>
+            <label for="admin-user">User ID</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="admin-pass" required>
+            <label for="admin-pass">Password</label>
+          </div>
+          <h4>Forgot Password?</h4>
+          <button type="submit" id="adminlogin">Log In</button>
+          <p class="back-arrow" onclick="goBack()">
+            <span class="arrow">&larr;</span>Back
+          </p>
+        </form>
+      </div>
     </div>
-    <div class="input-group">
-      <input type="password" id="admin-pass" required>
-      <label for="admin-pass">Password</label>
-    </div>
-    <h4>Forgot Password?</h4>
-    <button type="submit" id="adminlogin">Log In</button>
-   <p class="back-arrow" onclick="goBack()">
-  <span class="arrow">&larr;</span>Back
-</p>
-  </form>
+  </div>
 </div>
+
+
 
 
   <script>
@@ -480,6 +530,7 @@ const adminContainer = document.getElementById('adminContainer');
 // Show admin form when admin login button clicked
 adminBtn.addEventListener('click', () => {
   adminContainer.classList.add('active');
+  container.classList.remove('active');
 });
 
 
