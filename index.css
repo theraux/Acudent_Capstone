@@ -176,6 +176,7 @@ body {
   position: relative;
   width: 100%;
   overflow: hidden;
+  margin-top: 100px;
 }
 
 .slide {
@@ -208,6 +209,11 @@ body {
   position: absolute; /* Position it on the image */
   top: 40%;
   left: 12%;
+
+  display: flex;          /* Flexbox layout */
+  flex-direction: column; /* Stack text above button */
+  justify-content: center;/* Center content vertically */
+  align-items: flex-start;
 }
 
 .bottom-left {
@@ -480,7 +486,7 @@ body {
 /*Pictures of Clinic Section*/
 .Clinic-Images {
   padding: 16px 10%;
-  background: #FEF3E7;
+  background: #F5E3CD;
   text-align: center;
   color: #502C00;
 }
@@ -567,7 +573,7 @@ body {
   padding: 24px 0px;
   align-items: center;
   text-align: center;
-  background-color: #FEF3E7;
+  background-color: #F5E3CD;
   color: #502C00;
 }
 .Mapru iframe {
@@ -672,20 +678,29 @@ body {
   margin-bottom: 15px;
 }
 
+.social-icons {
+  display: flex;       /* keep them in a row */
+  gap: 10px;           /* control spacing between icons */
+  justify-content: center;
+}
 .social-icons a {
-  display: inline-block;
-  margin: 0 8px;
+  margin: 0 10px;
+  text-decoration: none;
+  background: transparent;
+  height: 10%;
+  width: 10%;
+  
 }
 
-.social-icons img {
-  width: 50px;
-  height: 50px;
-  filter: brightness(0) invert(1); /* white icons */
-  transition: filter 0.3s ease;
-}
+.social-icons i{
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: lighter;
+  margin-bottom: 50px;
 
-.social-icons a:hover img {
-  filter: brightness(0) invert(0.6) sepia(1) saturate(5) hue-rotate(20deg); /* gold-ish tint */
+}
+.social-icons i:hover {
+  color: #FEF3E7;
 }
 
 footer p {
@@ -708,3 +723,22 @@ footer p {
   }
 }
 
+
+
+.Navbar {
+  position: fixed;   /* keep both bars together */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.4s ease-in-out; /* smooth hide/show */
+}
+
+.top-nav {
+  height: 40px; /* fixed height for reference */
+  background: #eee;
+}
+
+.bottomNav {
+    background-color: #FEF3E7;
+}

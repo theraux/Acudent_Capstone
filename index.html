@@ -13,49 +13,49 @@
 </style>
 </head>
 <body>
-    <div class="Navbar">
-        <!-- Top navigation bar -->
-        <div class="top-nav">
-            <div class="opentimelogo">
-                <img src="opentimelogo.png" alt="Logo">
-            </div>
-            <div class="open-time">
-                Opening Time: Monday to Sunday
-                9:00 AM - 5:00 PM
-            </div>
+<div class="Navbar">
+    <!-- Top navigation bar -->
+    <div class="top-nav">
+        <div class="opentimelogo">
+            <img src="opentimelogo.png" alt="Logo">
         </div>
-        
-<!-- Bottom navigation bar -->
-<div class="bottomNav">
-    <div class="bottomNav-container">
-        <div class="logo">
-            <a href="#"><img src="Pictures/logo.png" alt="Clinic Logo"></a>
-           <div>
-                <h3>Mapru</h3>
-                <h5>Dental Clinic</h5>
-            </div> 
+        <div class="open-time">
+            Opening Time: Monday to Sunday
+            9:00 AM - 5:00 PM
         </div>
+    </div>
+    
+    <!-- Bottom navigation bar -->
+    <div class="bottomNav">
+        <div class="bottomNav-container">
+            <div class="logo">
+                <a href="#"><img src="Pictures/logo.png" alt="Clinic Logo"></a>
+                <div>
+                    <h3>Mapru</h3>
+                    <h5>Dental Clinic</h5>
+                </div> 
+            </div>
 
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li class="Services"><a href="services.html">SERVICES ▾</a>
-                <ul class="dropdown">
-                    <li><a href="services.html">Cleaning</a></li>
-                    <li><a href="services.html">Fillings</a></li>
-                    <li><a href="services.html">Tooth Extraction</a></li>
-                    <li><a href="services.html">Whitening</a></li>
-                    <li><a href="services.html">Orthodontics</a></li>
-                    <li><a href="services.html">Implants</a></li>
-                    <li><a href="services.html">Surgery</a></li>
-                </ul>
-            </li>
-            <li><a href="contact.html">CONTACT</a></li>
-       <li class="SignIn"><a href="#" id="openModal">SIGN IN</a></li>
-        </ul>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li class="Services"><a href="services.html">SERVICES ▾</a>
+                    <ul class="dropdown">
+                        <li><a href="services.html">Cleaning</a></li>
+                        <li><a href="services.html">Fillings</a></li>
+                        <li><a href="services.html">Tooth Extraction</a></li>
+                        <li><a href="services.html">Whitening</a></li>
+                        <li><a href="services.html">Orthodontics</a></li>
+                        <li><a href="services.html">Implants</a></li>
+                        <li><a href="services.html">Surgery</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li class="SignIn"><a href="#" id="openModal">SIGN IN</a></li>
+            </ul>
+        </div>
     </div>
 </div>
-    </div>
 
 
 
@@ -72,7 +72,7 @@
   <div class="slide fade">
     <img src="Pictures/mapru_aboutcopy.jpg" alt="Banner 2">
     <div class="bottom-left-container">
-    <div class="bottom-left">Bright Smiles <br> for Every Patient</div>
+    <div class="bottom-left">Providing dental care<br>for healthier smiles.</div>
     <button id="Appointment">Schedule an Appointment</button>
   </div>
   </div>
@@ -80,7 +80,7 @@
   <div class="slide fade">
     <img src="Pictures/mapru_servicescopy.jpg" alt="Banner 3">
     <div class="bottom-left-container">
-    <div class="bottom-left">Your Health, Your Confidence</div>
+    <div class="bottom-left">Expert dental services for a healthier, bright</div>
     <button id="Appointment">Schedule an Appointment</button>
     </div>
   </div>
@@ -89,7 +89,7 @@
   <div class="slide fade">
     <img src="Pictures/mapru_contact.png" alt="Banner 4">
     <div class="bottom-left-container">
-    <div class="bottom-left">Your Health, Your Confidence</div>
+    <div class="bottom-left">Reach out anytime for <br> expert dental care help.</div>
     <button id="Appointment">Schedule an Appointment</button>
   </div>
   </div>
@@ -504,7 +504,7 @@ function showDivs(n) {
 
 
 
-  <script>
+<script>
     const container = document.getElementById('container');
     const registerBtn = document.getElementById('Sign Up');
     const loginBtn = document.getElementById('Sign In');
@@ -561,6 +561,27 @@ adminBtn.addEventListener('click', () => {
    adminContainer.classList.remove('active');
 }
   </script>
+
+<script>
+let lastScrollTop = 0;
+const navbar = document.querySelector(".Navbar");
+
+window.addEventListener("scroll", function () {
+  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop) {
+    // scrolling down -> slide whole Navbar up by top-nav height
+    navbar.style.transform = "translateY(-40px)";
+  } else {
+    if (currentScroll === 0) {
+      // back at top -> reset
+      navbar.style.transform = "translateY(0)";
+    }
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+</script>
 
   
 </body>
